@@ -6,6 +6,8 @@
 
     /* Nav Bar */
     --nav-height: 7vh;
+
+    /* Body */
     --section-width: 80vw;
 }
 
@@ -119,7 +121,26 @@ nav ul li:hover a {
     justify-content: space-between;
     width: var(--section-width);
     margin: auto;
+    padding-left: 0.5em;
     border: 2px solid black;
+}
+
+.disc-name {
+    width: calc(var(--section-width) / 0.7);
+    margin-right: 10%;
+}
+
+.disc-name h3, h4 {
+    margin-top: 0em;
+    margin-bottom: 0.3em;
+}
+
+.disc-name h3 {
+    font-size: 2.5em;
+}
+
+.disc-name h4 {
+    font-size: 1.2em;
 }
 
 /* ChatGPT used on Feb 27, 2024 with the following prompts: */
@@ -131,17 +152,18 @@ nav ul li:hover a {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 5px;
-    width: 40%;
-    height: 61%;
-    border: 2px solid gold;
+    width: 100%;
+    border: 5px solid var(--primary);
+    border-top: 3px solid var(--primary);
 }
 
 .number {
     background-color: var(--secondary);
     color: var(--primary);
     text-align: center;
-    box-shadow: 1px 1px 0px var(--accent);
+    box-shadow: 2px 2px 0px var(--accent);
     border: 2px solid var(--secondary);
+    border-radius: 4px;
 }
 
 /* Pricing */
@@ -153,11 +175,45 @@ nav ul li:hover a {
     border: 2px solid red;
 }
 
+.price {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0.3em 0;
+    padding: 0;
+    border-top: 2px solid var(--accent);
+}
+
+.price p {
+    margin: 0.3em;
+}
+
+.top-price {
+    margin-top: 1em;
+}
+
+.ace-club-price {
+    font-weight: bold;
+}
+
+.bottom-price {
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 1em;
+}
+
 /* Footer */
 
 footer {
     background-color: var(--secondary);
-    width: 100vw;
     height: 10vh;
+    margin: 0px;
+    padding: 0px;
     box-shadow: 0px -3px 3px 3px var(--accent);
+}
+ 
+/* Media Resolutions for Wide Screen */
+
+@media (min-width: 768px) {
+  .product-carousel {
+    width: 40vw;
+  }
 }
