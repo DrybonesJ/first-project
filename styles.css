@@ -9,6 +9,7 @@
 
     /* Body */
     --section-width: 80vw;
+    --margin-between: 20px;
 }
 
 * {
@@ -23,10 +24,11 @@ body {
 /* Header & Nav Bar */
 
 header {
+    /* position: sticky; */
+    /* top: 0px; */
     height: var(--nav-height);
     background-color: var(--secondary);
     box-sizing: content-box;
-    /* border-bottom: 5px solid var(--accent); */
     box-shadow: 0px 3px 3px 3px var(--accent);
 }
 
@@ -110,7 +112,7 @@ nav ul li:hover a {
 .product-carousel {
     height: 70vh;
     width: var(--section-width);
-    margin: 35px auto 30px;
+    margin: 35px auto var(--margin-between);
     border: 2px solid black;
 }
 
@@ -122,15 +124,19 @@ nav ul li:hover a {
     width: var(--section-width);
     margin: auto;
     padding-left: 0.5em;
-    border: 2px solid black;
+    border: 2px solid var(--accent);
+    border-radius: 5px;
+    background-color: var(--secondary);
 }
 
 .disc-name {
     width: calc(var(--section-width) / 0.7);
     margin-right: 10%;
+    color: var(--primary);
 }
 
-.disc-name h3, h4 {
+.disc-name h3,
+.disc-name h4 {
     margin-top: 0em;
     margin-bottom: 0.3em;
 }
@@ -153,17 +159,33 @@ nav ul li:hover a {
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 5px;
     width: 100%;
-    border: 5px solid var(--primary);
-    border-top: 3px solid var(--primary);
+    border: 5px solid var(--secondary);
+    border-top: 3px solid var(--secondary);
+    border-radius: 3px;
 }
 
 .number {
-    background-color: var(--secondary);
-    color: var(--primary);
+    background-color: var(--primary);
+    color: var(--accent);
+    font-weight: bold;
     text-align: center;
-    box-shadow: 2px 2px 0px var(--accent);
+    box-shadow: 1px 1px 0px var(--accent);
     border: 2px solid var(--secondary);
     border-radius: 4px;
+}
+
+.number h6,
+.number p {
+    margin: 0;
+    padding: 0;
+}
+
+.number h6 {
+    font-size: 1.5em;
+}
+
+.number p {
+    font-size: 2em;
 }
 
 /* Pricing */
@@ -171,24 +193,34 @@ nav ul li:hover a {
 .pricing {
     width: var(--section-width);
     height: 30vh;
-    margin: 30px auto;
-    border: 2px solid red;
+    margin: var(--margin-between) auto;
+    background-color: var(--secondary);
+    border: 2px solid var(--accent);
+    border-radius: 5px;
+}
+
+.price-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0.2em;
+    margin: 0.3em;
+    background-color: var(--primary);
+    color: var(--accent);
+    height: 55%;
+    border-radius: 3px;
+    box-shadow: 1px 1px 0 var(--accent);
 }
 
 .price {
     display: flex;
     justify-content: space-between;
-    margin: 0 0.3em 0;
-    padding: 0;
+    padding: 0.1em;
     border-top: 2px solid var(--accent);
 }
 
 .price p {
     margin: 0.3em;
-}
-
-.top-price {
-    margin-top: 1em;
 }
 
 .ace-club-price {
@@ -197,7 +229,36 @@ nav ul li:hover a {
 
 .bottom-price {
     border-bottom: 2px solid var(--accent);
-    margin-bottom: 1em;
+}
+
+.button-display {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+}
+
+button {
+    height: 2.5em;
+    width: 12em;
+    border-radius: 1em;
+    font-weight: 900;
+    font-size: 1em;
+    margin: 1.35em 0.7em;
+    box-shadow: 1px 1px 0 black;
+}
+
+.button-buy {
+    background-color: var(--accent);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    text-shadow: 1px 1px 0 #000;
+}
+
+.button-favorites {
+    background-color: var(--primary);
+    color: var(--accent);
+    border: 2px solid var(--accent);
 }
 
 /* Footer */
@@ -209,11 +270,11 @@ footer {
     padding: 0px;
     box-shadow: 0px -3px 3px 3px var(--accent);
 }
- 
+
 /* Media Resolutions for Wide Screen */
 
 @media (min-width: 768px) {
-  .product-carousel {
-    width: 40vw;
-  }
+    .product-carousel {
+        width: 40vw;
+    }
 }
