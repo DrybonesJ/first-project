@@ -1,7 +1,6 @@
 :root {
     --primary: #ffffff;
     --secondary: #9900cc;
-    ;
     --accent: #EB7D7C;
 }
 
@@ -78,6 +77,10 @@ nav ul li:hover {
 
 nav ul li:hover a {
     color: var(--accent);
+}
+
+.nav-selected {
+    background-color: var(--accent);
 }
 
 .nav-right {
