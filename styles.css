@@ -1,7 +1,12 @@
 :root {
+    /* Colors */
     --primary: #ffffff;
     --secondary: #9900cc;
     --accent: #EB7D7C;
+
+    /* Nav Bar */
+    --nav-height: 7vh;
+    --section-width: 80vw;
 }
 
 * {
@@ -13,11 +18,14 @@ body {
     background-color: var(--primary);
 }
 
+/* Header & Nav Bar */
+
 header {
-    height: 8vh;
+    height: var(--nav-height);
     background-color: var(--secondary);
     box-sizing: content-box;
-    border-bottom: 5px solid var(--accent);
+    /* border-bottom: 5px solid var(--accent); */
+    box-shadow: 0px 3px 3px 3px var(--accent);
 }
 
 /* ChatGTP used on Feb 26, 2024 with the prompts below: */
@@ -41,7 +49,7 @@ nav {
 }
 
 nav img {
-    height: 7vh;
+    height: calc(var(--nav-height) - 1vh);
     margin: 15px;
 }
 
@@ -59,7 +67,7 @@ nav ul li {
     margin: 0;
     height: 100%;
     width: 5em;
-    line-height: 8vh;
+    line-height: var(--nav-height);
 }
 
 nav ul li a {
@@ -91,4 +99,65 @@ nav ul li:hover a {
 #header-search {
     color: var(--primary);
     margin: 15px;
+}
+
+/* Body */
+
+/* Product Carousel */
+
+.product-carousel {
+    height: 70vh;
+    width: var(--section-width);
+    margin: 35px auto 30px;
+    border: 2px solid black;
+}
+
+/* Disc Info */
+
+.disc-info {
+    display: flex;
+    justify-content: space-between;
+    width: var(--section-width);
+    margin: auto;
+    border: 2px solid black;
+}
+
+/* ChatGPT used on Feb 27, 2024 with the following prompts: */
+
+/* Can you explain basic CSS grid to me? */
+
+.flight-numbers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5px;
+    width: 40%;
+    height: 61%;
+    border: 2px solid gold;
+}
+
+.number {
+    background-color: var(--secondary);
+    color: var(--primary);
+    text-align: center;
+    box-shadow: 1px 1px 0px var(--accent);
+    border: 2px solid var(--secondary);
+}
+
+/* Pricing */
+
+.pricing {
+    width: var(--section-width);
+    height: 30vh;
+    margin: 30px auto;
+    border: 2px solid red;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--secondary);
+    width: 100vw;
+    height: 10vh;
+    box-shadow: 0px -3px 3px 3px var(--accent);
 }
