@@ -1,6 +1,7 @@
 :root {
-    --primary: #BB7CEB;
-    --secondary: #ffffff;
+    --primary: #ffffff;
+    --secondary: #9900cc;
+    ;
     --accent: #EB7D7C;
 }
 
@@ -10,4 +11,81 @@
 
 body {
     margin: 0px;
+    background-color: var(--primary);
+}
+
+header {
+    height: 8vh;
+    background-color: var(--secondary);
+    box-sizing: content-box;
+    border-bottom: 5px solid var(--accent);
+}
+
+/* ChatGTP used on Feb 26, 2024 with the prompts below: */
+
+/* What is the best way to write the basic HTML and CSS for a nav bar? */
+/* How do I get it so that the line items fill the full height of the nav bar? */
+/* How would I make it so when I hover over each anchor in my nav bar that the width of the background color is the same for all of them regardless of the length of the text? */
+/* Now when I've done that, my text only changes color when my cursor is on it instead of hovering the line item. How do I make it so the text always changes color regardless of whether I'm hovering the anchor or the line item? */
+
+nav {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    height: 7vh;
+    margin: 15px;
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0;
+    height: 100%;
+    width: 5em;
+    line-height: 8vh;
+}
+
+nav ul li a {
+    height: 100%;
+    width: 100%;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    background-color: var(--primary);
+    height: 100%;
+}
+
+nav ul li:hover a {
+    color: var(--accent);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+#header-search {
+    color: var(--primary);
+    margin: 15px;
 }
