@@ -11,24 +11,3 @@
 body {
     margin: 0px;
 }
-
-.primary-color {
-    background-color: var(--primary);
-    width: 100vw;
-    height: 100vh;
-    margin: 0px;
-    padding: 10px;
-    text-align: center;
-}
-
-.font-1 {
-    font-family: 'Roboto', sans-serif;
-    color: var(--secondary);
-}
-
-.accent {
-    background-color: var(--accent);
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-}
