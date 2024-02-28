@@ -55,7 +55,23 @@
         <!-- With this javascript, what do I need to do in CSS to enable this script to work? -->
 
         <section id="product-carousel">
+            
+            <!-- New Carousel Container -->
             <div class="product-carousel">
+                <div class="slides scroll-container" id="scrollContainer">
+                    <div class="scroll-item slide"><img src="./images/force-face.jpg" alt="Image 1"></div>
+                    <div class="scroll-item slide"><img src="./images/force-angled.jpg" alt="Image 2"></div>
+                    <div class="scroll-item slide"><img src="./images/force-tombstone-basket.jpg" alt="Image 3"></div>
+                    <div class="scroll-item slide"><img src="./images/force-tombstone-log.jpg" alt="Image 5"></div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="carousel-nav-arrow prev" id="prev-arrow" onclick="scrollImages('left')"><i class="fa-solid fa-chevron-left fa-2xl"></i></button>
+                    <button class="carousel-nav-arrow next" id="next-arrow" onclick="scrollImages('right')"><i class="fa-solid fa-chevron-right fa-2xl"></i></button>
+                </div>
+            </div>
+
+            <!-- Original Carousel Container -->
+            <!-- <div class="product-carousel">
                 <div class="slides">
                     <div class="slide active">
                         <img src="./images/force-face.jpg" alt="Picture of a Force disc from the front">
@@ -69,14 +85,11 @@
                     <div class="slide">
                         <img src="./images/force-tombstone-log.jpg" alt="Picture of a Force disc stuck in a log">
                     </div>
-                    </div>
                     <div class="carousel-nav">
                         <button class="carousel-nav-arrow prev"><i class="fa-solid fa-chevron-left fa-2xl"></i></button>
                         <button class="carousel-nav-arrow next"><i class="fa-solid fa-chevron-right fa-2xl"></i></button>
                     </div>
-                </div>
-                </div>
-                </div>
+                </div> -->
             </div>
         </section>
 
