@@ -5,8 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Force - Disc</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Scripts -->
     <script defer src="https://kit.fontawesome.com/07ed27e82e.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -31,9 +43,37 @@
     </header>
     <main>
         <!-- Product Carousel -->
+
+        <!-- ChatGPT was used on Feb 27, 2024 with the following prompts: -->
+
+        <!-- Can you explain to me how to create an image carousel in HTML and CSS? -->
+        <!-- Is using JavaScript for this better? -->
+        <!-- This doesn't hide my images. How does that work? -->
+        <!-- With this javascript, what do I need to do in CSS to enable this script to work? -->
+
         <section id="product-carousel">
             <div class="product-carousel">
-
+                <div class="slides">
+                    <div class="slide active">
+                        <img src="./images/force-face.jpg" alt="Picture of a Force disc from the front">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/force-angled.jpg" alt="Picture of a Force disc from an angle">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/force-tombstone-basket.jpg" alt="Picture of a Force disc stuck in the ground in front of a basket">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/force-tombstone-log.jpg" alt="Picture of a Force disc stuck in a log">
+                    </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-nav-arrow prev"><i class="fa-solid fa-chevron-left fa-2xl"></i></button>
+                        <button class="carousel-nav-arrow next"><i class="fa-solid fa-chevron-right fa-2xl"></i></button>
+                    </div>
+                </div>
+                </div>
+                </div>
             </div>
         </section>
 
@@ -43,7 +83,7 @@
 
                 <!-- Textual Info -->
                 <div class="disc-name">
-                    <h3>Discraft Force</h1>
+                    <h3>Discraft Force</h3>
                         <h4>Distance Driver</h4>
                         <p>
                             This is an excellent disc and the main driver that professional
@@ -79,16 +119,16 @@
             <div class="pricing">
                 <div class="price-box">
                     <div class="price ace-club-price">
-                        <p>Ace Club Price:</p>
-                        <p>$6.99 - $18.99</p>
+                        <span>Ace Club Price:</span>
+                        <span>$6.99 - $18.99</span>
                     </div>
                     <div class="price">
-                        <p>Regular Price:</p>
-                        <p>$9.99 - $21.99</p>
+                        <span>Regular Price:</span>
+                        <span>$9.99 - $21.99</span>
                     </div>
                     <div class="price bottom-price">
-                        <p>Amazon Price:</p>
-                        <p>$13.94 - $25.67</p>
+                        <span>Amazon Price:</span>
+                        <span>$13.94 - $25.67</span>
                     </div>
                 </div>
                 <div class="button-display">

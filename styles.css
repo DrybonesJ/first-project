@@ -24,8 +24,8 @@ body {
 /* Header & Nav Bar */
 
 header {
-    /* position: sticky; */
-    /* top: 0px; */
+    position: sticky;
+    top: 0px;
     height: var(--nav-height);
     background-color: var(--secondary);
     box-sizing: content-box;
@@ -71,6 +71,7 @@ nav ul li {
     margin: 0;
     height: 100%;
     width: 5em;
+    font-family: "Roboto", sans-serif;
     line-height: var(--nav-height);
 }
 
@@ -110,10 +111,60 @@ nav ul li:hover a {
 /* Product Carousel */
 
 .product-carousel {
-    height: 70vh;
+    height: var(--section-width);
     width: var(--section-width);
     margin: 35px auto var(--margin-between);
-    border: 2px solid black;
+ 
+    border-radius: 5px;
+}
+
+.slides {
+    height: 100%;
+    width: 100%;
+}
+
+.slide {
+    height: 100%;
+    display: none;
+}   
+
+.slide.active {
+    display: block;
+}
+
+.slide>img {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.carousel-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    align-items: center;
+    top: -55%;
+}
+
+.carousel-nav-arrow {
+    color: var(--accent);
+    background-color: var(--primary);
+    margin: 1em;
+    border: 2px solid var(--accent);
+    aspect-ratio: 1 / 1;
+}
+
+.active {
+    display: block;
+}
+
+.next, .prev {
+    cursor: pointer;
+}
+
+.next:hover, .prev:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
 }
 
 /* Disc Info */
@@ -147,6 +198,7 @@ nav ul li:hover a {
 
 .disc-name h4 {
     font-size: 1.2em;
+    font-family: "Roboto", sans-serif;
 }
 
 /* ChatGPT used on Feb 27, 2024 with the following prompts: */
@@ -185,7 +237,8 @@ nav ul li:hover a {
 }
 
 .number p {
-    font-size: 2em;
+    font-size: 2.4em;
+    padding: 0.2em;
 }
 
 /* Pricing */
@@ -219,12 +272,15 @@ nav ul li:hover a {
     border-top: 2px solid var(--accent);
 }
 
-.price p {
-    margin: 0.3em;
+.price span {
+    margin: 0.2em;
+    font-size: 1.1em;
 }
 
 .ace-club-price {
-    font-weight: bold;
+    color: var(--accent);
+    font-weight: 900;
+    text-shadow: 1px 1px 0 var(--accent);
 }
 
 .bottom-price {
@@ -238,27 +294,42 @@ nav ul li:hover a {
     height: 40%;
 }
 
-button {
+.button-display button {
     height: 2.5em;
     width: 12em;
     border-radius: 1em;
     font-weight: 900;
-    font-size: 1em;
+    font-size: 1.05em;
+    font-family: "Roboto", sans-serif;
     margin: 1.35em 0.7em;
     box-shadow: 1px 1px 0 black;
+}
+
+.button-display button:hover {
+    cursor: pointer;
 }
 
 .button-buy {
     background-color: var(--accent);
     color: var(--primary);
     border: 2px solid var(--primary);
-    text-shadow: 1px 1px 0 #000;
+    text-shadow: 1px 1px 0 var(--secondary);
+}
+
+.button-buy:hover {
+    background-color: var(--secondary);
+    border-color: var(--accent);
 }
 
 .button-favorites {
     background-color: var(--primary);
     color: var(--accent);
     border: 2px solid var(--accent);
+}
+
+.button-favorites:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
 }
 
 /* Footer */
