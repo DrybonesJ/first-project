@@ -10,6 +10,10 @@
     /* Body */
     --section-width: 80vw;
     --margin-between: 20px;
+
+    /* @Media Variables */
+    --media-left-section-width: 45vw;
+    --media-right-section-width: 35vw;
 }
 
 * {
@@ -114,7 +118,6 @@ nav ul li:hover a {
     height: var(--section-width);
     width: var(--section-width);
     margin: 35px auto var(--margin-between);
- 
     border-radius: 5px;
 }
 
@@ -126,7 +129,7 @@ nav ul li:hover a {
 .slide {
     height: 100%;
     display: none;
-}   
+}
 
 .slide.active {
     display: block;
@@ -158,11 +161,13 @@ nav ul li:hover a {
     display: block;
 }
 
-.next, .prev {
+.next,
+.prev {
     cursor: pointer;
 }
 
-.next:hover, .prev:hover {
+.next:hover,
+.prev:hover {
     background-color: var(--secondary);
     color: var(--primary);
 }
@@ -345,7 +350,41 @@ footer {
 /* Media Resolutions for Wide Screen */
 
 @media (min-width: 768px) {
+
+    main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .product-carousel {
-        width: 40vw;
+        width: var(--media-left-section-width);
+        height: var(--media-left-section-width);
+        margin: var(--margin-between) 5vw var(--margin-between)
+    }
+
+    #media-right-flex {
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 5vw;
+    }
+
+    .disc-info {
+        width: var(--media-right-section-width);
+        margin-bottom: 5vh;
+    }
+
+    .pricing {
+        width: var(--media-right-section-width);
+        margin: 0;
+    }
+
+    .disc-name {
+        width: calc(var(--media-right-section-width) / 0.7);
+        margin-right: 10%;
+    }
+
+    .flight-numbers {
+        width: 100%;
     }
 }
